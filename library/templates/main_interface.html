@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Main Interface</title>
+</head>
+<style>
+body {
+  background-image: url('https://wallpapers.com/images/hd/library-zoom-background-4000-x-2250-ft6ps5bdt30slpqm.jpg');
+}
+</style>
+<body>
+<div class="container mt-4">
+       <h2><a href="{% url 'category_list' %}" style="background-color:LightGray;">Category</a></h2>
+        <h2><a href="{% url 'author_list' %}" style="background-color:LightGray;">Author</a></h2>
+        <h2><a href="{% url 'book_list' %}" style="background-color:LightGray;">Book</a></h2>
+</div>
+<div class="container mt-4">
+
+</div>
+<div style="container mt-8">
+<form method="post" style="text-align: center;">
+    <a href="{% url 'register' %}" class="btn btn-secondary" style="background-color: Black; color: White;">Registration</a>
+    <a href="{% url 'login' %}" class="btn btn-primary" style="background-color: White; color: Black;">Logout</a>
+{% csrf_token %}
+</form>
+</div>
+</body>
+</html>

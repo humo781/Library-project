@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, inititial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Book update</title>
+</head>
+<body>
+<h1>Book Update</h1>
+<div class="container mt-4">
+<form method="post">
+    {% csrf_token %}
+    <div class="form-group">
+        <label for="title"><b>Title</b></label>
+        <input type="text" class="form-control" id="title" name="title" value="{{ book.title }}" required>
+        <label for="author"><b>Author</b></label>
+        <input type="text" class="form-control" id="author" name="published_at" value="{{ book.author }}" required>
+        <label for="published_at"><b>Published at</b></label>
+        <input type="text" class="form-control" id="published_at" name="published_at" value="{{ book.published_at }}" required>
+        <label for="isbn"><b>Isbn</b></label>
+        <input type="text" class="form-control" id="isbn" name="title" value="{{ book.isbn }}" required>
+        <label for="pages"><b>Pages</b></label>
+        <input type="text" class="form-control" id="pages" name="pages" value="{{ book.pages }}" required>
+        <label for="language"><b>Language</b></label>
+        <input type="text" class="form-control" id="language" name="language" value="{{ book.language }}" required>
+        <label for="category"><b>Category</b></label>
+        <input type="text" class="form-control" id="category" name="category" value="{{ book.category }}" required>
+        <label for="Added_at_to_librar"><b>Added at to library</b></label>
+        <input type="text" class="form-control" id="Added_at_to_librar" name="Added_at_to_librar" value="{{ book.added_at_to_library }}" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Save</button>
+    <a href="{% url 'book_list' %}" class="btn btn-secondary">Cancel</a>
+</form>
+</div>
+</body>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</html>
